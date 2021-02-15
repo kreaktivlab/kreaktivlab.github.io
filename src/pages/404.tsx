@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 import { Layout, SEO } from "../components"
 
-export default function NotFoundPage() {
+export default function NotFoundPage(): JSX.Element {
   return (
     <Layout>
       <SEO title="404: Not found" />
