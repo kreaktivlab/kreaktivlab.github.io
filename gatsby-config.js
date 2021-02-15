@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'kreaktivlab.com',
-    description: 'We love, play, and create games.',
-    author: 'Kreaktivlab',
+    title: "kreaktivlab.com",
+    description: "We love, play, and create games.",
+    author: "Kreaktivlab",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
