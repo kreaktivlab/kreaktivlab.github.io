@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import './Layout.css';
 import { Header } from '../shared';
 
 type LayoutProps = {

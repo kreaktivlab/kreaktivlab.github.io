@@ -4,8 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './src/style.css';
 
-import 'jquery/dist/jquery.js';
-import 'popper.js/dist/umd/popper.js'
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'jquery';
+import 'popper.js'
+import 'bootstrap';
