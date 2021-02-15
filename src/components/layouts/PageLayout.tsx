@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Header } from '../shared';
+import { Contact, Footer, Header } from '../shared';
 
 type LayoutProps = {
   children: ReactNode | Array<ReactNode>;
@@ -18,7 +18,7 @@ const styles = {
   }
 };
 
-export function Layout({ children }: LayoutProps): JSX.Element {
+export function PageLayout({ children }: LayoutProps): JSX.Element {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,14 +32,9 @@ export function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div style={styles.div}>
-        <main>{children}</main>
-        <footer style={styles.footer}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      {children}
+      <Contact />
+      <Footer />
     </>
   );
 }
