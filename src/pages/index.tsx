@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react';
 
-import { Layout, SEO } from "../components"
+import { Layout, SEO } from '../components';
 
 export default function IndexPage(): JSX.Element {
-  const email = "hello@kreaktivlab.com"
+  const email = 'hello@kreaktivlab.com';
 
   return (
     <Layout>
@@ -16,5 +16,5 @@ export default function IndexPage(): JSX.Element {
         <a href={`mailto:${email}`}>{email}</a>
       </p>
     </Layout>
-  )
+  );
 }

@@ -1,23 +1,23 @@
-import React, { ReactNode } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { ReactNode } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import "./layout.css"
-import { Header } from "./Header"
+import './layout.css';
+import { Header } from './Header';
 
 type LayoutProps = {
-  children: ReactNode | Array<ReactNode>
-}
+  children: ReactNode | Array<ReactNode>;
+};
 
 const styles = {
   div: {
-    margin: "0 auto",
+    margin: '0 auto',
     maxWidth: 960,
-    padding: "0 1.0875rem 1.45rem",
+    padding: '0 1.0875rem 1.45rem'
   },
   footer: {
-    marginTop: "2rem",
-  },
-}
+    marginTop: '2rem'
+  }
+};
 
 export function Layout({ children }: LayoutProps): JSX.Element {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -42,5 +42,5 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         </footer>
       </div>
     </>
-  )
+  );
 }
