@@ -26,6 +26,15 @@ module.exports = {
         display: "minimal-ui",
         icon: "src/images/gatsby-icon.png"
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: [
+          'roboto:300,400,500,600,700,900'
+        ],
+        display: 'swap'
+      }
     }
   ]
 }
