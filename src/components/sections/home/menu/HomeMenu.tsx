@@ -1,6 +1,5 @@
 import * as jQuery from 'jquery';
 import React, { useCallback, useEffect } from 'react';
-import { Link } from 'gatsby';
 
 import './HomeMenu.css';
 
@@ -26,7 +25,7 @@ export function HomeMenu(): JSX.Element {
       toggleBackground(navbar.css('display') === 'none');
     });
 
-    jQuery('nav a').on('click', () => {
+    jQuery('nav a').on('click', (event: Event) => {
       if (toggler.css('display') !== 'none') {
         if (navbar.css('display') !== 'none') {
           toggler.trigger('click');
@@ -35,10 +34,20 @@ export function HomeMenu(): JSX.Element {
     });
   }, []);
 
+  const onClick = useCallback((event) => {
+    event.preventDefault();
+    const hash = (event.target as HTMLAnchorElement).hash || '#Header';
+
+    jQuery('html, body').animate(
+      { scrollTop: jQuery(hash).offset().top },
+      'slow'
+    );
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-md navbar-light fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#Header">
+        <a className="navbar-brand" href="#Header" onClick={onClick}>
           <img
             src="assets/kreaktivlab-c.svg"
             className="d-none d-sm-inline-block align-top"
@@ -67,34 +76,48 @@ export function HomeMenu(): JSX.Element {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto mr-0">
-            <li className="nav-item">
-              <a href="#Services" className="nav-link">
-                Services
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#Games" className="nav-link">
-                Games
-              </a>
-            </li>
-            <li className="nav-item d-none d-md-block">
-              <a href="#Team" className="nav-link">
-                Team
-              </a>
-            </li>
-            <li className="nav-item d-none d-md-block">
-              <a href="#Blog" className="nav-link">
-                Blog
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#Contact" className="nav-link">
-                Contact
-              </a>
-            </li>
+            <MenuItem name="Services" onClick={onClick} />
+            <MenuItem name="Games" onClick={onClick} />
+            <MenuItem
+              name="Team"
+              onClick={onClick}
+              className="d-none d-md-block"
+            />
+            <MenuItem
+              name="Blog"
+              onClick={onClick}
+              className="d-none d-md-block"
+            />
+            <MenuItem name="Contact" onClick={onClick} />
           </ul>
         </div>
       </div>
     </nav>
+  );
+}
+
+type MenuItemProps = {
+  name: string;
+  href?: string;
+  onClick: (event) => void;
+  className?: string;
+};
+
+function MenuItem({
+  name,
+  href,
+  onClick,
+  className = ''
+}: MenuItemProps): JSX.Element {
+  if (!href) {
+    href = `#${name}`;
+  }
+
+  return (
+    <li className={`nav-item ${className}`}>
+      <a href={href} onClick={onClick} className="nav-link">
+        {name}
+      </a>
+    </li>
   );
 }
