@@ -1,5 +1,5 @@
+import $ from 'jquery';
 import * as PIXI from 'pixi.js';
-import * as $ from 'jquery';
 
 const PI2 = Math.PI * 2;
 
