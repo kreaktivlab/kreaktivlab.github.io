@@ -7,7 +7,7 @@ export default function IndexPage(): JSX.Element {
 
   return (
     <PageLayout>
-      <div className="container-fluid">
+      <div className="container-fluid text-center">
         <SEO title="Home" />
         <h1>Coming Soon!</h1>
         <p>Something really good is coming very soon.</p>

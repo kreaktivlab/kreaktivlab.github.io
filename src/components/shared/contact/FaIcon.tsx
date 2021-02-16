@@ -1,13 +1,5 @@
 import React from 'react';
 
-type FaIconsProps = {
-  faIcons: Array<FaIconProps>
-};
-
-export function FaIcons({ faIcons }: FaIconsProps): JSX.Element {
-  return (<p className="social">{faIcons.map((v, i) => (<FaIcon key={i} {...v} />))}</p>);
-}
-
 type FaIconProps = {
   href: string,
   color: string,
@@ -15,7 +7,7 @@ type FaIconProps = {
   icon: string
 };
 
-function FaIcon({ href, color, shape, icon }: FaIconProps): JSX.Element {
+export function FaIcon({ href, color, shape, icon }: FaIconProps): JSX.Element {
   return (
     <a href={href} target="_blank">
       <span className="fa-stack fa-lg" style={{ color: color }}>

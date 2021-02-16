@@ -27,7 +27,7 @@ const styles = {
 export function Header({ siteTitle = '' }: HeaderProps): JSX.Element {
   return (
     <header style={styles.header}>
-      <div style={styles.div}>
+      <div className="text-center" style={styles.div}>
         <h1 style={styles.h1}>
           <Link to="/" style={styles.link}>
             {siteTitle}

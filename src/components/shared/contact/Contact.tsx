@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { FaIcons } from './FaIcons';
+import './Contact.css';
+import { FaIcon } from './FaIcon';
 
 const data = {
   email: 'hello@kreaktivlab.com',
@@ -18,17 +19,21 @@ export function Contact(): JSX.Element {
   const { email, faIcons } = data;
 
   return (
-    <div id="Contact" className="container-fluid">
+    <div id="Contact" className="container-fluid text-center">
       <h2>Contact</h2>
 
-      <div className="row">
-        <div className="col-12">
+      <div className="row mail">
+        <div className="col-md-2" />
+        <div className="col-md-8">
           If you have any questions or a game idea,
           please contact us at <a href={`mailto:${email}`}>{email}</a>
         </div>
+        <div className="col-md-2" />
       </div>
 
-      <FaIcons faIcons={faIcons} />
+      <p className="social">
+        {faIcons.map((v, i) => (<FaIcon key={i} {...v} />))}
+      </p>
     </div>
   );
 }
