@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { FaIcons } from './FaIcons';
+
 const data = {
   email: 'hello@kreaktivlab.com',
   faIcons: [
     {
-      link: 'https://facebook.com/kreaktivlab',
+      href: 'https://facebook.com/kreaktivlab',
       color: '#3b5999',
       shape: 'fa-circle',
       icon: 'fa-facebook'
@@ -26,14 +28,7 @@ export function Contact(): JSX.Element {
         </div>
       </div>
 
-      <p className="social">
-        <a href="https://facebook.com/kreaktivlab" target="_blank">
-          <span className="fa-stack fa-lg" style={{color: '#3b5999'}}>
-            <i className={`fa fa-circle fa-stack-2x`} />
-            <i className={`fa fa-facebook fa-stack-1x fa-inverse`} />
-          </span>
-        </a>
-      </p>
+      <FaIcons faIcons={faIcons} />
     </div>
   );
 }
