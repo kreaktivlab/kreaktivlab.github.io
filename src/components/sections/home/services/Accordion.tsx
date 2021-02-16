@@ -86,6 +86,9 @@ function Card({
             className="btn btn-link"
             type="button"
             data-toggle="collapse"
+            aria-expanded={index === 0 ? 'true' : 'false'}
+            data-target={`#collapse${index}`}
+            aria-controls={`collapse${index}`}
           >
             <i
               className={`fa ${
@@ -101,6 +104,7 @@ function Card({
         id={`collapse${index}`}
         className={`collapse ${visibility ? 'show' : ''}`}
         data-parent="#accordionServices"
+        aria-labelledby={`heading${index}`}
       >
         <div className="card-body">{description}</div>
       </div>
