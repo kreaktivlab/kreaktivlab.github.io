@@ -33,7 +33,9 @@ export function Services(): JSX.Element {
           </table>
         </div>
 
-        <Accordion />
+        <div className="row mt-5 text-left">
+          <Accordion />
+        </div>
       </div>
     </div>
   );

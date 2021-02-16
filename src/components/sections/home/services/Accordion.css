@@ -1,0 +1,15 @@
+.acc .accordion {
+  font-size: 14pt;
+}
+
+.acc .card {
+  background-color: rgb(42, 8, 80);
+  width: 100%;
+  border: none;
+}
+
+.acc .card .btn-link {
+  color: #f42f70;
+  font-weight: bold;
+  font-size: 14pt;
+}
