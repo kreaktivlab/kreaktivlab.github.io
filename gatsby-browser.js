@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-import './src/style.css';
+import './src/styles.css';
 
 import 'jquery';
 import 'popper.js'

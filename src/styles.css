@@ -1,0 +1,17 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+h2 {
+  padding: 0;
+  margin: 0 0 40px 0;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+  font-size: 44pt;
+  font-weight: 900;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa;
+}
