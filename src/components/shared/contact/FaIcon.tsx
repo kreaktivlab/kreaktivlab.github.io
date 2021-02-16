@@ -1,10 +1,10 @@
 import React from 'react';
 
 type FaIconProps = {
-  href: string,
-  color: string,
-  shape: string,
-  icon: string
+  href: string;
+  color: string;
+  shape: string;
+  icon: string;
 };
 
 export function FaIcon({ href, color, shape, icon }: FaIconProps): JSX.Element {

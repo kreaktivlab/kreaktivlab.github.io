@@ -26,14 +26,16 @@ export function Contact(): JSX.Element {
         <div className="row mail">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            If you have any questions or a game idea,
-            please contact us at <a href={`mailto:${email}`}>{email}</a>
+            If you have any questions or a game idea, please contact us at{' '}
+            <a href={`mailto:${email}`}>{email}</a>
           </div>
           <div className="col-md-2"></div>
         </div>
 
         <p className="social">
-          {faIcons.map((v, i) => (<FaIcon key={i} {...v} />))}
+          {faIcons.map((v, i) => (
+            <FaIcon key={i} {...v} />
+          ))}
         </p>
       </div>
     </div>

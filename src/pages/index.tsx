@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageLayout, SEO } from '../components';
+import { PageLayout, SEO, Services } from '../components';
 
 export default function IndexPage(): JSX.Element {
   const email = 'hello@kreaktivlab.com';
@@ -11,6 +11,7 @@ export default function IndexPage(): JSX.Element {
         <SEO title="Home" />
         <h1>Coming Soon!</h1>
         <p>Something really good is coming very soon.</p>
+        <Services />
       </div>
     </PageLayout>
   );
