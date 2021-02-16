@@ -7,5 +7,5 @@
 import './src/styles.css';
 
 import 'jquery';
-import 'popper.js'
+import 'popper.js';
 import 'bootstrap';
