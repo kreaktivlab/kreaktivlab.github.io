@@ -1,26 +1,42 @@
-import React from 'react';
+import * as jQuery from 'jquery';
+import React, { useCallback, useEffect } from 'react';
 import { Link } from 'gatsby';
 
 import './HomeMenu.css';
 
 export function HomeMenu(): JSX.Element {
+  const toggleBackground = useCallback((isOpened: boolean = false) => {
+    const nav = jQuery('nav');
+    const color = 'bg-white';
+
+    if (isOpened || 0 < window.scrollY) {
+      nav.removeClass('bg-transparent').addClass(color);
+    } else {
+      nav.removeClass(color).addClass('bg-transparent');
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => toggleBackground());
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-md navbar-light fixed-top">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#Header">
           <img
-            src="../../../../assets/kreaktivlab-c.svg"
+            src="assets/kreaktivlab-c.svg"
             className="d-none d-sm-inline-block align-top"
             alt="Logo"
             style={{ height: '52px' }}
           />
           <img
-            src="../../../../assets/kreaktivlab-c.svg"
+            src="assets/kreaktivlab-c.svg"
             className="d-inline-block d-sm-none align-top"
             alt="Logo"
             style={{ height: '26px' }}
           />
-        </Link>
+        </a>
 
         <button
           className="navbar-toggler bg-white"
