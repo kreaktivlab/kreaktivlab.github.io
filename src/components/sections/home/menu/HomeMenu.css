@@ -1,0 +1,11 @@
+nav .navbar-nav a {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+	font-size: 1.25em;
+  color: #38066e !important;
+  text-transform: uppercase;
+}
+
+nav .navbar-nav a:hover {
+	color: #f42f70 !important;
+}

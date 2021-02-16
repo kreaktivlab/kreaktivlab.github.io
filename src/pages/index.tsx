@@ -3,6 +3,7 @@ import React from 'react';
 import {
   PageLayout,
   SEO,
+  HomeMenu,
   Services,
   Games,
   TechPlat,
@@ -10,11 +11,10 @@ import {
 } from '../components';
 
 export default function IndexPage(): JSX.Element {
-  const email = 'hello@kreaktivlab.com';
-
   return (
     <PageLayout>
       <SEO title="Home" />
+      <HomeMenu />
 
       <div className="container-fluid text-center">
         <h1>Coming Soon!</h1>
