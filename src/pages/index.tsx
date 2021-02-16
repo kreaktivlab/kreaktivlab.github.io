@@ -5,8 +5,9 @@ import {
   SEO,
   HomeMenu,
   Services,
-  Games,
   TechPlat,
+  Games,
+  Team,
   Blog
 } from '../components';
 
@@ -22,8 +23,9 @@ export default function IndexPage(): JSX.Element {
       </div>
 
       <Services />
-      <Games />
       <TechPlat />
+      <Games />
+      <Team />
       <Blog />
     </PageLayout>
   );
