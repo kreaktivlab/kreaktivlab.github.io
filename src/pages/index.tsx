@@ -1,9 +1,10 @@
 import React from 'react';
 
 import {
-  PageLayout,
+  BaseLayout,
   SEO,
   HomeMenu,
+  Header,
   Services,
   TechPlat,
   Games,
@@ -13,20 +14,15 @@ import {
 
 export default function IndexPage(): JSX.Element {
   return (
-    <PageLayout>
+    <BaseLayout>
       <SEO title="Home" />
       <HomeMenu />
-
-      <div className="container-fluid text-center">
-        <h1>Coming Soon!</h1>
-        <p>Something really good is coming very soon.</p>
-      </div>
-
+      <Header />
       <Services />
       <TechPlat />
       <Games />
       <Team />
       <Blog />
-    </PageLayout>
+    </BaseLayout>
   );
 }
