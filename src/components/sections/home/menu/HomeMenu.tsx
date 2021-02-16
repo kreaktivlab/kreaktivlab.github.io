@@ -18,6 +18,21 @@ export function HomeMenu(): JSX.Element {
 
   useEffect(() => {
     window.addEventListener('scroll', () => toggleBackground());
+
+    const toggler = jQuery('.navbar-toggler');
+    const navbar = jQuery('.navbar-collapse');
+
+    toggler.on('click', () => {
+      toggleBackground(navbar.css('display') === 'none');
+    });
+
+    jQuery('nav a').on('click', () => {
+      if (toggler.css('display') !== 'none') {
+        if (navbar.css('display') !== 'none') {
+          toggler.trigger('click');
+        }
+      }
+    });
   }, []);
 
   return (
