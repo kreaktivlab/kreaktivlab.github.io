@@ -1,0 +1,13 @@
+#Games {
+  padding: 100px 0;
+}
+
+#Games .carousel-control-prev,
+#Games .carousel-control-next {
+  background-color: transparent;
+}
+
+#Games .carousel-control-prev:hover,
+#Games .carousel-control-next:hover {
+  background-color: rgba(56,6,110,1);
+}

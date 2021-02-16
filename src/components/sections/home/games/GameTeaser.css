@@ -1,0 +1,23 @@
+.game-teaser .carousel-caption {
+  background-color: rgba(0,0,0,0.25);
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.game-teaser:hover .carousel-caption {
+  display: block;
+}
+
+.game-teaser h2 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  font-size: 4vw;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.game-teaser h5 {
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  font-size: 4vw;
+}

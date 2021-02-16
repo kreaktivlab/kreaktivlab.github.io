@@ -1,3 +1,6 @@
+import 'jquery';
+import 'popper.js';
+import 'bootstrap';
 import React, { ReactNode } from 'react';
 
 import { Contact, Footer } from '../shared';

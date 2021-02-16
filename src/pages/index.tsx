@@ -4,6 +4,7 @@ import {
   PageLayout,
   SEO,
   Services,
+  Games,
   TechPlat,
   Blog
 } from '../components';
@@ -21,6 +22,7 @@ export default function IndexPage(): JSX.Element {
       </div>
 
       <Services />
+      <Games />
       <TechPlat />
       <Blog />
     </PageLayout>
