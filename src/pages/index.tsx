@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { PageLayout, SEO, Services, TechPlat } from '../components';
+import {
+  PageLayout,
+  SEO,
+  Services,
+  TechPlat,
+  Blog
+} from '../components';
 
 export default function IndexPage(): JSX.Element {
   const email = 'hello@kreaktivlab.com';
@@ -16,6 +22,7 @@ export default function IndexPage(): JSX.Element {
 
       <Services />
       <TechPlat />
+      <Blog />
     </PageLayout>
   );
 }

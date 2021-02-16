@@ -62,8 +62,6 @@ type TechItemProps = {
 };
 
 function TechItem(props: TechItemProps): JSX.Element {
-  console.log(props);
-
   return (
     <div className="col-md-4">
       <img className="img-fluid" {...props} />
