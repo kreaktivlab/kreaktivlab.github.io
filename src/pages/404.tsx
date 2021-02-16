@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { PageLayout, SEO } from '../components';
+import { BaseLayout, SEO } from '../components';
 
 const styles = {
   pnf: {
-    padding: '100px 0 60px 0',
+    padding: '60px 0 60px 0',
     width: '100%',
     margin: '0',
     lineHeight: '1em',
@@ -18,7 +18,7 @@ const styles = {
 
 export default function NotFoundPage(): JSX.Element {
   return (
-    <PageLayout>
+    <BaseLayout>
       <SEO title="Page Not Found!" />
 
       <div className="container-fluid text-center" style={styles.pnf}>
@@ -28,13 +28,12 @@ export default function NotFoundPage(): JSX.Element {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row d-none">
           <div className="col-12">
             <Link to="/" className="btn btn-primary btn-lg">Back to Home</Link>
           </div>
         </div>
       </div>
-
-    </PageLayout>
+    </BaseLayout>
   );
 }
