@@ -7,7 +7,7 @@ type FaIconProps = {
 };
 
 export function FaIcon({
-  color = '#000000',
+  color = '#ffffff',
   shape = 'fa-circle',
   icon
 }: FaIconProps): JSX.Element {

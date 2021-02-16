@@ -7,12 +7,14 @@ export default function IndexPage(): JSX.Element {
 
   return (
     <PageLayout>
+      <SEO title="Home" />
+
       <div className="container-fluid text-center">
-        <SEO title="Home" />
         <h1>Coming Soon!</h1>
         <p>Something really good is coming very soon.</p>
-        <Services />
       </div>
+
+      <Services />
     </PageLayout>
   );
 }

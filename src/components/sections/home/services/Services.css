@@ -1,0 +1,107 @@
+#Services {
+  padding: 100px 0;
+  background-color: #38066e;
+  color: #ffffff;
+}
+
+#Services .fa-inverse {
+  color: #f42f70;
+}
+
+/* xs */
+@media (max-width: 575px) {
+  #Services .row .fa-stack {
+    font-size: 10vw;
+  }
+
+  #Services .row h2 {
+    font-size: 7vw;
+  }
+
+  #Services .row h2 span {
+    display: block;
+    font-size: 12vw;
+  }
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 767px) {
+  #Services .row .fa-stack {
+    font-size: 10vw;
+  }
+
+  #Services .row h2 {
+    font-size: 5vw;
+  }
+
+  #Services .row h2 span {
+    display: block;
+    font-size: 8vw;
+  }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 991px) {
+  #Services .mb {
+    margin-bottom: 3em;
+  }
+
+  #Services .row .fa-stack {
+    font-size: 10vw;
+  }
+
+  #Services .row h2 {
+    font-size: 5.875vw;
+  }
+
+  #Services .row h2 span {
+    font-size: 6.5vw;
+  }
+}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #Services .row .fa-stack {
+    font-size: 8.25vw;
+  }
+
+  #Services .row h2 {
+    font-size: 3.875vw;
+  }
+
+  #Services .row h2 span {
+    font-size: 4.5vw;
+  }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+  #Services .row .fa-stack {
+    font-size: 6.25vw;
+  }
+
+  #Services .row h2 {
+    font-size: 2.5vw;
+  }
+
+  #Services .row h2 span {
+    font-size: 3.3vw;
+  }
+}
+
+#Services .row h2 {
+  padding: 0;
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#Services .row h2 span {
+  font-weight: 900;
+  color: #f42f70;
+}
+
+#Services table {
+  color: #ffffff;
+}

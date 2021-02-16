@@ -32,9 +32,9 @@ export function Services(): JSX.Element {
             </tbody>
           </table>
         </div>
-      </div>
 
-      <Accordion />
+        <Accordion />
+      </div>
     </div>
   );
 }
