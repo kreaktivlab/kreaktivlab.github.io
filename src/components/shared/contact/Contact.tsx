@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Contact.css';
-import { FaIcon } from './FaIcon';
+import { Social } from './Social';
 
 const data = {
   email: 'hello@kreaktivlab.com',
@@ -21,7 +21,7 @@ export function Contact(): JSX.Element {
   return (
     <div id="Contact">
       <div className="container text-center">
-        <h2>Contact</h2>
+        <h1>Contact</h1>
 
         <div className="row mail">
           <div className="col-md-2"></div>
@@ -34,7 +34,7 @@ export function Contact(): JSX.Element {
 
         <p className="social">
           {faIcons.map((v, i) => (
-            <FaIcon key={i} {...v} />
+            <Social key={i} {...v} />
           ))}
         </p>
       </div>
