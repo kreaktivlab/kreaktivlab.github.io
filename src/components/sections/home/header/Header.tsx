@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './Header.css';
 import './Effect.css';
+import { init } from './Effect';
 
 export function Header(): JSX.Element {
+  useEffect(() => init(), []);
+
   return (
     <section id="Header">
       <canvas id="canvas" />
